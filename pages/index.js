@@ -65,12 +65,15 @@ const Home = ({ categories }) => {
                                 <img
                                     src={c.image && c.image.url}
                                     alt={c.name}
-                                    style={{ width: '100px', height: 'auto' }}
+                                    style={{ width: '100px', height: '80px',  }}
                                     className="pr-3"
                                 />
                             </div>
                             <div className="col-md-8">
                                 <h3>{c.name}</h3>
+                                <div className="row">
+                                    <p> {c.content.replace(/(<([^>]+)>)/gi, "")}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -82,7 +85,7 @@ const Home = ({ categories }) => {
         <Layout>
             <div className="row">
                 <div className="col-md-12">
-                    <h1 className="font-weight-bold">Browse Tutorials/Courses</h1>
+                    <h1 className="font-weight-bold">Browse Tutorials</h1>
                     <br />
                 </div>
             </div>
@@ -90,7 +93,7 @@ const Home = ({ categories }) => {
             <div className="row">{listCategories()}</div>
 
             <div className="row pt-5">
-                <h2 className="font-weight-bold pb-3">Trending {popular.length}</h2>
+                <h2 className="font-weight-bold pb-3">Trending </h2>
                 {<div className="col-md-12 overflow-hidden">{listOfLinks()}</div>}
             </div>
         </Layout>
