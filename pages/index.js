@@ -26,11 +26,11 @@ const Home = ({ categories }) => {
 
     const listOfLinks = () =>
         popular.map((l, i) => (
-            <div key={i} className="row alert alert-secondary p-2">
-                <div className="col-md-8" onClick={() => handleClick(l._id)}>
+            <div key={i} className="row alert alert-secondary p-2 shadow-sm mb-3">
+                <div className="col-md-8 " onClick={() => handleClick(l._id)}>
                     <a href={l.url} target="_blank">
                         <h5 className="pt-2">{l.title}</h5>
-                        <h6 className="pt-2 text-danger" style={{ fontSize: '12px' }}>
+                        <h6 className="pt-2 text-danger" style={{ fontSize: '0.9rem' }}>
                             {l.url}
                         </h6>
                     </a>
