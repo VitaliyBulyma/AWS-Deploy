@@ -59,20 +59,20 @@ const Home = ({ categories }) => {
     const listCategories = () =>
         categories.map((c, i) => (
             <Link key={i} href={`/links/${c.slug}`}>
-                <a style={{  }} className="bg-light p-4 col-md-4 shadow mb-4  ">
+                <a style={{  }} className="bg-light p-4 col-md-4 shadow mb-4">
                     <div>
                         <div className="row">
-                            <div className="col-md-4">
+                            <div className="col-md-4 text-center">
                                 <img
                                     src={c.image && c.image.url}
                                     alt={c.name}
-                                    style={{ width: '100px', height: '80px', borderRadius:'5px' }}
-                                    className="shadow"
+                                    // style={{ maxWidth: '100px', maxHeight: '80px', borderRadius:'5px' }}
+                                    className="shadow img-fluid"
                                 />
                             </div>
-                            <div className="col-md-8">
+                            <div className="col-md-8 d-none d-sm-block text-center">
                                 <h3>{c.name}</h3>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <p> {c.content.replace(/(<([^>]+)>)/gi, "")}</p>
                                 </div>
                             </div>
@@ -86,9 +86,9 @@ const Home = ({ categories }) => {
         <Layout>
             <div className="jumbotron jumbotron-fluid">
                 <div className="container-fluid">
-                    <h1 className="display-4">Tutorials Sharing Portal</h1>
+                    <h1 className=" text-center"><strong style={{fontSize: "2em"}}>Tutorials Sharing Portal</strong></h1>
                     <hr className="my-4" />
-                    <p className="lead">Browse and share you favorite resources to learn programming </p>
+                    <p className="lead text-center">Browse and share you favorite resources to learn programming </p>
                 </div> 
             
             </div>
