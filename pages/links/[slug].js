@@ -7,6 +7,7 @@ import renderHTML from 'react-render-html';
 import moment from 'moment';
 import { API, APP_NAME } from '../../config';
 import InfiniteScroll from 'react-infinite-scroller';
+import Footer from '../../components/Footer';
 
 const Links = ({ query, category, links, totalLinks, linksLimit, linkSkip }) => {
     const [allLinks, setAllLinks] = useState(links);
@@ -64,7 +65,7 @@ const Links = ({ query, category, links, totalLinks, linksLimit, linkSkip }) => 
 
                 <div className="col-md-4 pt-2">
                     <span className="pull-right">
-                        {moment(l.createdAt).fromNow()} by {l.postedBy.name}
+                        {moment(l.createdAt).fromNow()} 
                     </span>
                 </div>
 
@@ -155,6 +156,7 @@ const Links = ({ query, category, links, totalLinks, linksLimit, linkSkip }) => 
                         </div>
                     </div>
                 </InfiniteScroll>
+                <Footer />
             </Layout>
         </Fragment>
     );

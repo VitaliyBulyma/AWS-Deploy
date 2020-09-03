@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
 
     return (
         <React.Fragment>
-            {head()} {nav()} <div className="container pt-5 pb-5">{children}</div>
+            {head()} {nav()} <div style={{height:'80vh'}} className="container pt-5 pb-5">{children}</div>
         </React.Fragment>
     );
 };

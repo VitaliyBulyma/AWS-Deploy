@@ -157,12 +157,13 @@ const Register = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted ml-4">Category</label>
+                <h2 className="ml-2">Category</h2>
+                <p>Select all categories you would like to follow</p>
                 <ul style={{ maxHeight: '100px', overflowY: 'scroll' }}>{showCategories()}</ul>
             </div>
 
             <div className="form-group">
-                <button className="btn btn-outline-warning">{buttonText}</button>
+                <button className="btn btn-outline-primary"><strong>{buttonText}</strong></button>
             </div>
         </form>
     );

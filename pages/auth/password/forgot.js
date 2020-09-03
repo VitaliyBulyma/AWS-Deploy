@@ -53,7 +53,7 @@ const ForgotPassword = () => {
                 />
             </div>
             <div>
-                <button className="btn btn-outline-warning">{buttonText}</button>
+                <button className="btn btn-outline-primary"><strong>{buttonText}</strong></button>
             </div>
         </form>
     );

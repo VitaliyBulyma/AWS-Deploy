@@ -183,7 +183,7 @@ const Update = ({ oldLink, token }) => {
                 <input type="url" className="form-control" onChange={handleURLChange} value={url} />
             </div>
             <div>
-                <button disabled={!token} className="btn btn-outline-warning" type="submit">
+                <button disabled={!token} className="btn btn-outline-primary" type="submit">
                     {isAuth() || token ? 'Update' : 'Login to update'}
                 </button>
             </div>

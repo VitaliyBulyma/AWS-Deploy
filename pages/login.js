@@ -67,7 +67,7 @@ const Login = () => {
                 />
             </div>
             <div className="form-group">
-                <button className="btn btn-outline-warning">{buttonText}</button>
+                <button className="btn btn-outline-primary "><strong>{buttonText}</strong></button>
             </div>
         </form>
     );

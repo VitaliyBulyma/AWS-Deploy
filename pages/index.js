@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 import axios from 'axios';
 import moment from 'moment';
 import Link from 'next/link';
@@ -58,15 +59,15 @@ const Home = ({ categories }) => {
     const listCategories = () =>
         categories.map((c, i) => (
             <Link key={i} href={`/links/${c.slug}`}>
-                <a style={{ border: '1px solid red' }} className="bg-light p-3 col-md-4">
+                <a style={{  }} className="bg-light p-4 col-md-4 shadow mb-4  ">
                     <div>
                         <div className="row">
                             <div className="col-md-4">
                                 <img
                                     src={c.image && c.image.url}
                                     alt={c.name}
-                                    style={{ width: '100px', height: '80px',  }}
-                                    className="pr-3"
+                                    style={{ width: '100px', height: '80px', borderRadius:'5px' }}
+                                    className="shadow"
                                 />
                             </div>
                             <div className="col-md-8">
@@ -84,22 +85,19 @@ const Home = ({ categories }) => {
     return (
         <Layout>
             <div className="jumbotron jumbotron-fluid">
-            <div className="container-fluid">
-                <h1 className="display-4">Tutorials Sharing Portal</h1>
-                <hr className="my-4" />
-                <p className="lead">Browse and share you favorite resources to learn programming </p>
-            </div>
+                <div className="container-fluid">
+                    <h1 className="display-4">Tutorials Sharing Portal</h1>
+                    <hr className="my-4" />
+                    <p className="lead">Browse and share you favorite resources to learn programming </p>
+                </div> 
             
-            
             </div>
-
-
             <div className="row">{listCategories()}</div>
-
             <div className="row pt-5">
                 <h2 className="font-weight-bold pb-3">Trending </h2>
                 {<div className="col-md-12 overflow-hidden">{listOfLinks()}</div>}
             </div>
+            <Footer />
         </Layout>
     );
 };

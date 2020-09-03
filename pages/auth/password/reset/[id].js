@@ -41,7 +41,7 @@ const ResetPassword = ({ router }) => {
                 success: response.data.message
             });
         } catch (error) {
-            console.log('RESET PW ERROR', error);
+            console.log('Reset Password error', error);
             setState({
                 ...state,
                 buttonText: 'Forgot Password',
@@ -63,7 +63,7 @@ const ResetPassword = ({ router }) => {
                 />
             </div>
             <div>
-                <button className="btn btn-outline-warning">{buttonText}</button>
+                <button className="btn btn-outline-primary"><strong>{buttonText}</strong></button>
             </div>
         </form>
     );

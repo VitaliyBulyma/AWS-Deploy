@@ -180,8 +180,8 @@ const Create = ({ token }) => {
                 <input type="url" className="form-control" onChange={handleURLChange} value={url} />
             </div>
             <div>
-                <button disabled={!token} className="btn btn-outline-warning" type="submit">
-                    {isAuth() || token ? 'Post' : 'Login to post'}
+                <button disabled={!token} className="btn btn-outline-primary" type="submit">
+                  <strong>{isAuth() || token ? 'Post' : 'Login to post'}</strong>  
                 </button>
             </div>
         </form>
@@ -199,7 +199,7 @@ const Create = ({ token }) => {
                 <div className="col-md-4">
                     <div className="form-group">
                         <label className="text-muted ml-4">Category</label>
-                        <ul style={{ maxHeight: '100px', overflowY: 'scroll' }}>{showCategories()}</ul>
+                        <ul style={{ maxHeight: '200px', overflowY: 'scroll', maxWidth:'200px' }}>{showCategories()}</ul>
                     </div>
                     <div className="form-group">
                         <label className="text-muted ml-4">Type</label>
