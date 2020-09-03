@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
             { process.browser && isAuth() && isAuth().role === 'admin' && (
                 <li className="nav-item ml-auto">
                     <Link href="/admin">
-                        <a className="nav-link text-dark">{isAuth().name}</a>
+                        <a className="nav-link text-light">{isAuth().name}</a>
                     </Link>
                 </li>
             )}

@@ -43,7 +43,7 @@ const Home = ({ categories }) => {
 
                 <div className="col-md-12">
                     <span className="badge text-dark">
-                        {l.type} {l.medium}
+                        {l.type} / {l.medium}
                     </span>
                     {l.categories.map((c, i) => (
                         <span key={i} className="badge text-success">
