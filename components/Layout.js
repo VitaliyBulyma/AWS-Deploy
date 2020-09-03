@@ -12,7 +12,7 @@ Router.onRouteChangeError = url => NProgress.done();
 
 const Layout = ({ children }) => {
     const head = () => (
-        <React.Fragment>
+        <Head>
             <link
                 rel="stylesheet"
                 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -21,10 +21,14 @@ const Layout = ({ children }) => {
             />
             <link rel="stylesheet" href="/static/css/styles.css" />
             <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="description" content="Tutorials Link Sharing Portal" />
+            <meta property="og:title" content="TutShare.ca" />
+            <meta property="og:description" content="Tutorials Link Sharing Portal" />
+            <meta property="og:image" content="https://vitaliybulyma.com/assets/images/screen.jpg" />
+            <meta property="og:image:secure_url" content="https://vitaliybulyma.com/assets/images/screen.jpg" />
 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-
-        </React.Fragment>
+        </Head>
     );
 
     const nav = () => (
