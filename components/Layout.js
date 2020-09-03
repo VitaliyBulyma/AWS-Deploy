@@ -9,6 +9,7 @@ Router.onRouteChangeStart = url => NProgress.start();
 Router.onRouteChangeComplete = url => NProgress.done();
 Router.onRouteChangeError = url => NProgress.done();
 
+
 const Layout = ({ children }) => {
     const head = () => (
         <React.Fragment>
@@ -23,15 +24,15 @@ const Layout = ({ children }) => {
     );
 
     const nav = () => (
-        <ul className="nav nav-tabs bg-warning">
+        <ul className="nav nav-tabs bg-dark">
             <li className="nav-item">
                 <Link href="/">
-                    <a className="nav-link text-dark">Home</a>
+                    <a className="nav-link text-light">Home</a>
                 </Link>
             </li>
             <li className="nav-item">
                 <Link href="/user/link/create">
-                    <a className="nav-link text-dark btn btn-success" style={{borderRadius: '0px'}}>Submit a link</a>
+                    <a className="nav-link text-light btn btn-success" style={{borderRadius: '0px'}}>Submit a link</a>
                 </Link>
             </li>
 
@@ -39,12 +40,12 @@ const Layout = ({ children }) => {
                 <React.Fragment>
                     <li className="nav-item">
                         <Link href="/login">
-                            <a className="nav-link text-dark">Login</a>
+                            <a className="nav-link text-light">Login</a>
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link href="/register">
-                            <a className="nav-link text-dark">Register</a>
+                            <a className="nav-link text-light">Register</a>
                         </Link>
                     </li>
                 </React.Fragment>
@@ -61,14 +62,14 @@ const Layout = ({ children }) => {
             { process.browser && isAuth() && isAuth().role === 'subscriber' && (
                 <li className="nav-item ml-auto">
                     <Link href="/user">
-                        <a className="nav-link text-dark">{isAuth().name}</a>
+                        <a className="nav-link text-light">{isAuth().name}</a>
                     </Link>
                 </li>
             )}
 
             { process.browser && isAuth() && (
                 <li className="nav-item">
-                    <a onClick={logout} className="nav-link text-dark">
+                    <a onClick={logout} className="nav-link text-light">
                         Logout
                     </a>
                 </li>
