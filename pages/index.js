@@ -83,12 +83,16 @@ const Home = ({ categories }) => {
 
     return (
         <Layout>
-            <div className="row">
-                <div className="col-md-12">
-                    <h1 className="font-weight-bold">Browse Tutorials</h1>
-                    <br />
-                </div>
+            <div className="jumbotron jumbotron-fluid">
+            <div className="container-fluid">
+                <h1 className="display-4">Tutorials Sharing Portal</h1>
+                <hr className="my-4" />
+                <p className="lead">Browse and share you favorite resources to learn programming </p>
             </div>
+            
+            
+            </div>
+
 
             <div className="row">{listCategories()}</div>
 
